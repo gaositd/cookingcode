@@ -1,7 +1,8 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import logo from '../images/logo192.png';
+// import logo from '../images/logo192.png';
+import navbar from './navbar.module.css'
 export function Navbar(){
 
   function changeLanguage(){
@@ -9,9 +10,9 @@ export function Navbar(){
   }
  
   return(
-    <div>
+    <div className="navbar.navbar">
         <img
-          src={logo}
+          //src={logo}
           alt="Logo Cooking Code"
          />
          <ul>
