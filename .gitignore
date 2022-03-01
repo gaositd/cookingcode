@@ -25,7 +25,4 @@ yarn-error.log*
 /.gits/
 
 #images
-*.png
-*.jpg
-*.jpeg
 *.gif

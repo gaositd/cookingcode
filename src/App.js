@@ -11,11 +11,11 @@ import React from 'react';
 import { Navbar } from './components/navbar/Navbar.jsx'
 import { Home } from './components/home/Home.jsx'
 import { ChefCards } from './components/Chefs/ChefCards.jsx';
-import { ChefCard } from './components/Chefs/ChefCard.jsx';
 import { About } from './components/about/About.jsx';
 import { Contact } from './components/contact/Contact.jsx';
 import { WhatWeCooking } from './components/weCooking/WhatWeCooking.jsx'
 import { HowWeCooking } from './components/weCooking/HowWeCooking.jsx';
+import { PinchLove } from './components/pinch/pinchLove.jsx'
 
 function App(){ 
   return (
@@ -25,13 +25,10 @@ function App(){
         <Route
           path="/"
           element={<Home />} />
-        <Route 
-          path ='/'
-          element='{<ChefCards/>}'>
-            <Route 
-              path="/"
-              element='{<ChefCards/>}'/>
-        </Route>
+        <Route
+          path='/'
+          element={<ChefCards />}
+        />
         <Route 
           path='/home'
           element={<Home />}
@@ -53,6 +50,8 @@ function App(){
           element={<Contact />}
         />
       </Routes>
+      <PinchLove /> 
+      <ChefCards />
     </div>
   )
 }

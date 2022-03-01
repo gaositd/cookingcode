@@ -1,8 +1,8 @@
-import React from "react";
+import React, { Fragment } from "react";
 
 import { Link } from "react-router-dom";
-// import logo from '../images/logo192.png';
-import navbar from './navbar.module.css'
+import logo from '../../images/hat/klipartz_chef.com.png';
+import './navbar.css';
 export function Navbar(){
 
   function changeLanguage(){
@@ -10,33 +10,48 @@ export function Navbar(){
   }
  
   return(
-    <div className="navbar.navbar">
-        <img
-          //src={logo}
-          alt="Logo Cooking Code"
-         />
-         <ul>
-           <li>
-             <Link to={'home'}>
-               Home
-             </Link>
-           </li>
-           <li>
-             <Link to="about">About Us</Link>
-            </li>
-           <li>
-             <Link to="whatwecooking">What we cooking</Link>
-            </li>
-           <li>
-             <Link to="HowWeCooking">How we cooking</Link>
-            </li>
-           <li>
-             <Link to="contact">Contact</Link>
-            </li>
-           <li>
-             <Link to="language" onClick={changeLanguage}>Es/En</Link>
-            </li>
-         </ul>
-    </div>
+    <Fragment>
+      <hr className="hr"/>
+      <header className="navbar">
+          <section className="logoSlogan">
+            <div>
+              <img
+                src={logo}
+                alt="Logo Cooking Code"
+                className="img"
+              />
+            </div>
+            <div>
+              <p><Link to="/" className="slogan">Cooking Code</Link></p>
+            </div>
+          </section>
+          <section className="menu">
+          <ul>
+              <div>
+                <li>
+                  <Link to={'home'}>
+                  Home
+                  </Link>
+                </li>
+              </div>
+            <li>
+              <Link to="about">About Us</Link>
+              </li>
+            <li>
+              <Link to="whatwecooking">What we cooking</Link>
+              </li>
+            <li>
+              <Link to="HowWeCooking">How we cooking</Link>
+              </li>
+            <li>
+              <Link to="contact">Contact</Link>
+              </li>
+            <li>
+              <Link to="language" onClick={changeLanguage}>Español</Link> / <Link to="language" onClick={changeLanguage}>English</Link>
+              </li>
+            </ul>
+          </section>
+      </header>
+    </Fragment>
   )
 }
